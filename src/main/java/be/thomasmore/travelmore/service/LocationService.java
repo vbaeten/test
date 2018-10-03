@@ -29,7 +29,7 @@ public class LocationService {
         location.setName(newName);
     }
 
-    public void insert(Location location) {
-        locationRepository.insert(location);
+    public Location insert(Location location) {
+        return locationRepository.insert(location);
     }
 }

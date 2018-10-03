@@ -22,7 +22,9 @@ public class LocationRepository {
         return entityManager.createNamedQuery(Location.FIND_BY_CODE, Location.class).setParameter("code", code).getSingleResult();
     }
 
-    public void insert(Location location) {
+    public Location insert(Location location) {
         entityManager.persist(location);
+
+        return location;
     }
 }
