@@ -20,21 +20,6 @@
     </dependencies>
     <build>
         <finalName>travelmore</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/web</directory>
-                            <filtering>true</filtering>
-                        </resource>
-                    </webResources>
-                </configuration>
-            </plugin>
-
-        </plugins>
     </build>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

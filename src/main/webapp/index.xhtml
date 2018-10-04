@@ -7,7 +7,6 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <ui:composition template="templates/templ.xhtml">
-   <f:view>
       <ui:define name="table">
       <p:dataTable var="location" value="#{locationController.locations}" id="locationDataTable">
          <p:column headerText="Id">
@@ -27,17 +26,16 @@
       <h:form id="addLocationForm">
          <p:panel id="panel" header="Form" style="margin-bottom:10px;">
             <h:panelGrid columns="4" cellpadding="5">
-               <h:outputLabel for="locationName" value="Standard Label:" />
-               <p:inputText name="locationName" value="#{locationController.newLocation.name}"></p:inputText>
-               <h:outputLabel for="locationCode" value="Standard Label:" />
-               <p:inputText name="locationCode" value="#{locationController.newLocation.code}"></p:inputText>
+               <h:outputLabel for="locationName" value="Name:" />
+               <p:inputText id="locationName" value="#{locationController.newLocation.name}"></p:inputText>
+               <h:outputLabel for="locationCode" value="Code:" />
+               <p:inputText id="locationCode" value="#{locationController.newLocation.code}"></p:inputText>
                <h:commandButton value="Toevoegen" action="#{locationController.submit}" update=":locationDataTable" />
             </h:panelGrid>
          </p:panel>
 
       </h:form>
       </ui:define>
-   </f:view>
 </ui:composition>
 
 </html>

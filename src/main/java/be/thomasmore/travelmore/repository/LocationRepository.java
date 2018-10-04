@@ -7,7 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-@Stateless
 public class LocationRepository {
     @PersistenceContext(unitName = "travelMorePU")
     private EntityManager entityManager;
