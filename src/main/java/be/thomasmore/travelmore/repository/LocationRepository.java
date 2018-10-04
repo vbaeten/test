@@ -2,10 +2,12 @@ package be.thomasmore.travelmore.repository;
 
 import be.thomasmore.travelmore.domain.Location;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Stateless
 public class LocationRepository {
     @PersistenceContext(unitName = "travelMorePU")
     private EntityManager entityManager;

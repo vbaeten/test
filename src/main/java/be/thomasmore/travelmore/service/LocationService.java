@@ -9,6 +9,7 @@ import java.util.List;
 
 @Stateless
 public class LocationService {
+
     @Inject
     private LocationRepository locationRepository;
 

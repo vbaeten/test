@@ -19,7 +19,7 @@ import java.util.List;
 import static javax.ws.rs.core.Response.Status.OK;
 
 @Path("locations")
-public class LocationRestController {
+public class LocationController {
     @Inject
     private LocationService locationService;
 
