@@ -9,7 +9,6 @@ import java.util.List;
 
 @Stateless
 public class LocationService {
-
     @Inject
     private LocationRepository locationRepository;
 
@@ -30,7 +29,8 @@ public class LocationService {
         location.setName(newName);
     }
 
-    public Location insert(Location location) {
-        return locationRepository.insert(location);
+    public void insert(Location location) {
+        locationRepository.insert(location);
     }
+
 }

@@ -2,12 +2,10 @@ package be.thomasmore.travelmore.repository;
 
 import be.thomasmore.travelmore.domain.Location;
 
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-@Stateless
 public class LocationRepository {
     @PersistenceContext(unitName = "travelMorePU")
     private EntityManager entityManager;
@@ -24,9 +22,8 @@ public class LocationRepository {
         return entityManager.createNamedQuery(Location.FIND_BY_CODE, Location.class).setParameter("code", code).getSingleResult();
     }
 
-    public Location insert(Location location) {
+    public void insert(Location location) {
         entityManager.persist(location);
-
-        return location;
     }
+
 }
